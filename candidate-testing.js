@@ -30,7 +30,7 @@ function askQuestion() {
   for(let i = 0; i < question.length; i++ ){
       candidateAnswer[i] =input.question(question[i] )
 
-      console.log(`Your answer was ${candidateAnswer[i]} the correct answer was ${correctAnswer[i]}.`)
+      console.log(`Your answer was: ${candidateAnswer[i]} \nThe correct answer was: ${correctAnswer[i]}.`)
   }
 
 //function gradeQuiz(candidateAnswers) {
