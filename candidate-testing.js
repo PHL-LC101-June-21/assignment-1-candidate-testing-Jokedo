@@ -21,20 +21,36 @@ function askForName() {
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 //candidateAnswer = input.question(question[i])
- for (let i = 0; i < question.length; i++){
+ //for (let i = 0; i < question.length; i++){
+for(let i = 0; i < question.length; i++ ){
+      candidateAnswer[i] = input.question(question[i] )
 
-
-    console.log(input.question(question[i]));
+      console.log(`Your answer was: ${candidateAnswer[i]} \nThe Correct Answer was: ${correctAnswer[i]}.\n`)
   }
+
+    //console.log(input.question(question[i]));
+ // }
 }
-  for(let i = 0; i < question.length; i++ ){
-      candidateAnswer[i] =input.question(question[i] )
+  
 
-      console.log(`Your answer was: ${candidateAnswer[i]} \nThe correct answer was: ${correctAnswer[i]}.`)
-  }
+function gradeQuiz(candidateAnswers) {
+    //this section is trying to compare the candidateAnswer and correctAnswer to store it in a new array. This new array will be compared to the questions array to get the percentage of correct answers. 
+      let = candidateAnswers = 0;
 
-//function gradeQuiz(candidateAnswers) {
-
+      for(let i = 0; i < question.length; i++){
+        if (`${candidateAnswer[i]}`.toUppercase == `${correctAnswer[i]}`.toUppercase){
+         //if(candidateAnswer[i].toUppercase === correctAnswer[i].toUppercase) {
+          candidateAnswers +=1;
+        }
+       // console.log(candidateAnswers)
+      }  let grade = (candidateAnswers/question.length)*100;
+        
+        if (grade >= 80) {
+          console.log(`>>> Overall Grade: ${grade}% (${candidateAnswers} of 5 responses Correct) <<< \n>>> Status: PASSED <<<`)
+        } else {
+          console.log(`>>> Overall Grade: ${grade}% (${candidateAnswers} of 5 responses Correct) <<< \n>>> Status: FAILED <<<`)
+        }
+      
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
     /*if (correctAnswer == candidateAnswer){
       console.log("Congrats! that is correct.");
@@ -44,21 +60,22 @@ function askQuestion() {
     */
   //  console.log(``)
 
-//    }
+    
 
-//  let grade;
+  
+ // console.log("grade")
   
 
-  return grade;
+ // return grade;
 //}
-
+}
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
     
-    console.log(`Hello, ${candidateName} nice to meet you!`);
+  //console.log(`Hello, ${candidateName} nice to meet you!\n`);
   //console.log("Hello, " + candidateName + " nice to meet you!");
-    
+    console.log(`Candidate Name:  ${candidateName}\n`);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
