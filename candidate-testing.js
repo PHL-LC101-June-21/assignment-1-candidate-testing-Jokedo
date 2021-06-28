@@ -36,7 +36,7 @@ function gradeQuiz(candidateAnswers) {
       let = candidateAnswers = 0;
 
       for(let i = 0; i < question.length; i++){
-        if (`${candidateAnswer[i]}`.toUppercase == `${correctAnswer[i]}`.toUppercase){
+        if (`${candidateAnswer[i]}` == `${correctAnswer[i]}`){
          //if(candidateAnswer[i].toUppercase === correctAnswer[i].toUppercase) {
           candidateAnswers +=1;
         }
