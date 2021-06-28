@@ -20,8 +20,7 @@ function askForName() {
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-//candidateAnswer = input.question(question[i])
- //for (let i = 0; i < question.length; i++){
+
 for(let i = 0; i < question.length; i++ ){
       candidateAnswer[i] = input.question(question[i] )
 
@@ -29,10 +28,9 @@ for(let i = 0; i < question.length; i++ ){
   }
 
     //console.log(input.question(question[i]));
- // }
+
 }
   
-
 function gradeQuiz(candidateAnswers) {
     //this section is trying to compare the candidateAnswer and correctAnswer to store it in a new array. This new array will be compared to the questions array to get the percentage of correct answers. 
       let = candidateAnswers = 0;
@@ -60,9 +58,7 @@ function gradeQuiz(candidateAnswers) {
     */
   //  console.log(``)
 
-    
 
-  
  // console.log("grade")
   
 
@@ -74,7 +70,6 @@ function runProgram() {
   // TODO 1.1c: Ask for candidate's name //
     
   //console.log(`Hello, ${candidateName} nice to meet you!\n`);
-  //console.log("Hello, " + candidateName + " nice to meet you!");
     console.log(`Candidate Name:  ${candidateName}\n`);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
