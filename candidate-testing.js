@@ -27,7 +27,6 @@ for(let i = 0; i < question.length; i++ ){
       console.log(`Your answer was: ${candidateAnswer[i]} \nThe Correct Answer was: ${correctAnswer[i]}.\n`)
   }
 
-    //console.log(input.question(question[i]));
 
 }
   
@@ -36,8 +35,8 @@ function gradeQuiz(candidateAnswers) {
       let = candidateAnswers = 0;
 
       for(let i = 0; i < question.length; i++){
-        if (`${candidateAnswer[i]}` == `${correctAnswer[i]}`){
-         //if(candidateAnswer[i].toUppercase === correctAnswer[i].toUppercase) {
+        if (`${candidateAnswer[i]}`.toUpperCase() == `${correctAnswer[i]}`.toUpperCase()){
+         
           candidateAnswers +=1;
         }
        // console.log(candidateAnswers)
@@ -49,21 +48,6 @@ function gradeQuiz(candidateAnswers) {
           console.log(`>>> Overall Grade: ${grade}% (${candidateAnswers} of 5 responses Correct) <<< \n>>> Status: FAILED <<<`)
         }
       
-  // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-    /*if (correctAnswer == candidateAnswer){
-      console.log("Congrats! that is correct.");
-    }   else {
-          console.log("Sorry, that is not correct.");
-    }
-    */
-  //  console.log(``)
-
-
- // console.log("grade")
-  
-
- // return grade;
-//}
 }
 function runProgram() {
   askForName();
