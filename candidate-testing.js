@@ -26,8 +26,6 @@ for(let i = 0; i < question.length; i++ ){
 
       console.log(`Your answer was: ${candidateAnswer[i]} \nThe Correct Answer was: ${correctAnswer[i]}.\n`)
   }
-
-
 }
   
 function gradeQuiz(candidateAnswers) {
@@ -36,10 +34,8 @@ function gradeQuiz(candidateAnswers) {
 
       for(let i = 0; i < question.length; i++){
         if (`${candidateAnswer[i]}`.toUpperCase() == `${correctAnswer[i]}`.toUpperCase()){
-         
           candidateAnswers +=1;
         }
-       // console.log(candidateAnswers)
       }  let grade = (candidateAnswers/question.length)*100;
         
         if (grade >= 80) {
